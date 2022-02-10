@@ -1,0 +1,54 @@
+.categories {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &__title {
+        cursor: pointer;
+        position: relative;
+        background: $primary-color;
+        display: flex;
+        align-items: center;
+        padding: 15px 15px 15px 40px;
+        color: #fff;
+        h3 {
+            margin: 0;
+            line-height: 0;
+            @include text(1.8rem, 700, unset, #fff, unset);
+        }
+    }
+    .menu-icon,
+    .down-icon {
+        display: flex;
+        font-size: 2rem;
+    }
+    .menu-icon {
+        margin-right: 10px;
+    }
+    .down-icon {
+        position: absolute;
+        right: 18px;
+    }
+    &__list {
+        display: none;
+        border: 1px solid #ebebeb;
+        padding-left: 40px;
+        padding-top: 10px;
+        padding-bottom: 12px;
+        overflow: hidden;
+        &__item {
+            a {
+                text-decoration: none;
+                line-height: 39px;
+                @include text(1.6rem, 500, unset, $text-color, unset);
+                transition: 0.2s;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &.open &__list {
+        display: block;
+    }
+}

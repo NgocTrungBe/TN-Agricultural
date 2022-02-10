@@ -1,0 +1,36 @@
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+@each $val in $numbers {
+    .grid-col-#{$val} {
+        grid-template-columns: repeat($val, 1fr);
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-md-#{$val} {
+        @include tablet {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-sm-#{$val} {
+        @include mobile {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+.main {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    min-height: 100vh;
+}

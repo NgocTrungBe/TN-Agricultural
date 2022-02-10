@@ -1,0 +1,17 @@
+//abstracts
+@import './abstracts/mixins';
+@import './abstracts/variables';
+//base
+@import './base/reset';
+@import './base/base';
+//layouts 
+@import './layouts/header';
+@import './layouts/hero.scss';
+@import './layouts//MainCategories';
+@import './layouts/Featured';
+//components
+@import './components/categories';
+@import './components/search';
+@import './components/buttons';
+@import './components/carousel';
+@import './components/section';

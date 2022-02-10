@@ -1,0 +1,104 @@
+.header {
+    &__top {
+        background: #F5F5F5;
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &--left {
+            display: flex;
+            padding: 10px 0;
+            li {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                padding-right: 20px;
+                @include text(1.4rem, 400, unset, #1c1c1c, 0);
+                line-height: 1.5rem;
+                &:first-child {
+                    border-right: 1px solid #1c1c1c;
+                }
+                span {
+                    font-size: 1.8rem;
+                    margin-right: 8px;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+        &--right {
+            a {
+                @include text(1.5rem, 500, unset, #1c1c1c, 0);
+                text-decoration: none;
+                transition: 0.1s ease-in-out;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            span {
+                padding-right: 10px;
+                padding-left: 10px;
+                font-size: 1.8rem;
+                margin-right: 8px;
+                line-height: 1.6rem;
+                color: #333;
+            }
+        }
+    }
+    &__bottom {
+        &__content {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__logo {
+        a {
+            display: inline-block;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    &__nav {
+        &__item {
+            display: inline-block;
+            margin-right: 55px;
+            @include text(1.4rem, 700, unset, #252525, 0.2rem);
+            transition: 0.1s;
+        }
+        &__item:hover {
+            color: $primary-color;
+        }
+        &__item.active {
+            color: $primary-color;
+        }
+    }
+    &__cart {
+        position: relative;
+        cursor: pointer;
+        &__icon {
+            font-size: 2.3rem;
+            color: #333;
+            font-weight: bold;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: $primary-color;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 100%;
+            text-align: center;
+        }
+    }
+}
