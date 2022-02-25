@@ -1,18 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {IoMenuSharp,IoChevronDownSharp} from 'react-icons/io5';
 import $ from 'jquery';
+import { Link } from 'react-router-dom';
 function Categories(props) {
    
-    useEffect(()=>{
-        $('.categories').on('click',function(){
-            $(this).toggleClass('open',3000); 
-        });
-    },[])
 
-   
+    const categories = [
+        {
+            display: "Cafe",
+            path:"/"
+        },
+        {
+            display: "Hồ Tiêu",
+            path:"/"
+
+        },
+        {
+            display: "Hạt Điều",
+            path:"/"
+
+        },
+        {
+            display: "Bơ",
+            path:"/"
+
+        },
+        {
+            display: "Cacao",
+            path:"/"
+
+        }
+    ]
+    const cateRef = useRef(null);
+
+    const categoriesToggle = () =>{
+        cateRef.current.classList.toggle('open');
+    }
+    
   
     return (
-        <div className="categories">
+        <div className="categories" ref={cateRef} onClick={categoriesToggle}>
             <div className="categories__title">
                  <span className="menu-icon"><IoMenuSharp></IoMenuSharp></span>
                  <h3>Danh mục</h3>
@@ -20,11 +47,11 @@ function Categories(props) {
                
             </div>
             <ul className="categories__list">
-              <li className="categories__list__item"><a href="#">Cafe</a></li>
-              <li className="categories__list__item"><a href="#">Hồ Tiêu</a></li>
-              <li className="categories__list__item"><a href="#">Bơ</a></li>
-              <li className="categories__list__item"><a href="#">CaCao</a></li>
-
+                {
+                    categories.map((item,index) =>(
+                        <li key={index} className="categories__list__item"><Link to={item.path}>{item.display}</Link></li>
+                    ))
+                }
             </ul>
         </div>
     );

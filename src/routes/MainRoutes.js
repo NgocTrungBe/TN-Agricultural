@@ -2,14 +2,16 @@ import React from 'react';
 import {Route,Routes} from 'react-router-dom';
 import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
-import Detail from '../components/Detail/Detail';
+import Product from '../pages/Product';
+
 
 function MainRoutes(props) {
     return (
         <Routes>
              <Route path='/' element={<Home/>}></Route>
              <Route path="/Catalog" element={<Catalog/>}></Route>
-             <Route path="/Detail" element={<Detail/>}></Route>
+             <Route path="/Catalog/:slug" element={<Product/>}></Route>
+          
         </Routes>
     );
 } 

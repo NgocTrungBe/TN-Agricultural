@@ -3,12 +3,14 @@ import React from 'react';
 function Section(props) {
     return (
         <div className="section">
-            
+            {
+                props.children
+            }
         </div>
     );
 }
 
-function SectionTitle(props){
+export function SectionTitle(props){
     return(
         <div className="section__title">
              {props.children}
@@ -16,7 +18,7 @@ function SectionTitle(props){
     )
 }
 
-function SectionBody(props){
+export function SectionBody(props){
     return(
         <div className="section__body">
              {props.children}

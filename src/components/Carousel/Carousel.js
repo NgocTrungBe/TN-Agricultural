@@ -35,9 +35,7 @@ function NextButton(props){
    
 
 
-function CategoriesCarousel() {
-
-    
+function Carousel() {
     let settings = {
         dots: false,
         infinite: true,
@@ -47,14 +45,38 @@ function CategoriesCarousel() {
         // autoplaySpeed: 2000,
         // cssEase: "linear",
         nextArrow:<NextButton/>,
-        prevArrow: <PrevButton/>
+        prevArrow: <PrevButton/>,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            }
+          ]
       };
     return (
         <div>
             <Slider {...settings}>
-
               <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/3c5f77a78c3c74c31d0c93667fa397d4.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/cafe.jpg")})` }}>
 
                      </div>
                      <div className="item__name">
@@ -62,7 +84,7 @@ function CategoriesCarousel() {
                      </div>
                 </div>  
                 <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/ca-phe-1601078726.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/hatdieu.jpg")})` }}>
 
                      </div>
                      <div className="item__name">
@@ -70,14 +92,14 @@ function CategoriesCarousel() {
                      </div>
                 </div>
                 <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/eb338aae96f2526a76f401567988ce4a.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/hattieu.jpg")})` }}>
                      </div>
                      <div className="item__name">
                          <a href="#">Hồ Tiêu</a>
                      </div>
                 </div>
                 <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/mau-bao-bi-hat-dieu-dep.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/botnghe.jpg")})` }}>
 
                      </div>
                      <div className="item__name">
@@ -85,7 +107,7 @@ function CategoriesCarousel() {
                      </div>
                 </div>
                 <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/tải xuống.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/hatdieu.jpg")})` }}>
 
                      </div>
                      <div className="item__name">
@@ -93,7 +115,7 @@ function CategoriesCarousel() {
                      </div>
                 </div>
                 <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/ca-phe-1601078726.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/hattieu.jpg")})` }}>
 
                      </div>
                      <div className="item__name">
@@ -101,7 +123,7 @@ function CategoriesCarousel() {
                      </div>
                 </div>
                 <div className="item">
-                     <div className="item__bg" style={{backgroundImage:`url(${require("../../images/ca-phe-1601078726.jpg")})` }}>
+                     <div className="item__bg" style={{backgroundImage:`url(${require("../../assets/images/botnghe.jpg")})` }}>
 
                      </div>
                      <div className="item__name">
@@ -115,4 +137,4 @@ function CategoriesCarousel() {
     );
 }
 
-export default CategoriesCarousel;
+export default Carousel;

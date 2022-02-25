@@ -1,13 +1,12 @@
 import React from 'react';
-import CategoriesCarousel from './CategoriesCarousel';
+import Carousel from '../Carousel/Carousel';
 
 
 function MainCategories() {
-  
     return (
         <div className="main-categories">
             <div className="container">
-                 <CategoriesCarousel></CategoriesCarousel>
+                 <Carousel></Carousel>
             </div>
         </div>
     );

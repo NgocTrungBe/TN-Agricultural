@@ -11,10 +11,13 @@ function App() {
 
   return (
       <BrowserRouter>
+       
        <Header/>
        <Hero/>
        <div className="main">
-         <MainRoutes></MainRoutes>
+          <div className="container">
+            <MainRoutes></MainRoutes>
+          </div>
        </div>
        <Footer/>
       </BrowserRouter>

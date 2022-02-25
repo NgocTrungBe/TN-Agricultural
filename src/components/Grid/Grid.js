@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 function Grid(props) {
     const styles = {
-        gap: props.gap ? `${props.gap}px`: 0;
+        gap: props.gap ? `${props.gap}px`: '0'
     }
     const col = props.col ? `grid-col-${props.col}`:'';
     const mdCol = props.mdCol ? `grid-col-md-${props.mdCol}`:'';
@@ -10,7 +10,7 @@ function Grid(props) {
 
 
     return (
-        <div className={`grid ${col} ${mdCol} ${smCol}`}>
+        <div className={`grid ${col} ${mdCol} ${smCol}`} style={styles}>
             {
                 props.children
             }

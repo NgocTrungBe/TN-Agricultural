@@ -1,21 +1,27 @@
 .section {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
     &__title {
-        margin-bottom: 50px;
-        h2 {
-            position: relative;
-            @include text(3.6rem, 700, unset, #1c1c1c, unset);
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -15px;
-                left: 0;
-                right: 0;
-                width: 80px;
-                height: 4px;
-                background: $primary-color;
-                margin: 0 auto;
-            }
+        position: relative;
+        @include text(3.1rem, 700, unset, #1c1c1c, unset);
+        text-align: center;
+        margin-bottom: 40px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: $primary-color;
+            margin: 0 auto;
         }
+    }
+    &__body {
+        margin-top: 30px;
     }
 }

@@ -1,12 +1,12 @@
 .categories {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    box-shadow: $box-shadow-2;
     &__title {
         cursor: pointer;
         position: relative;
         background: $primary-color;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
         display: flex;
         align-items: center;
         padding: 15px 15px 15px 40px;

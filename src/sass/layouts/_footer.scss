@@ -1,0 +1,25 @@
+.footer {
+    padding: 60px 0;
+    background: #f3f6fa;
+    &__logo {
+        height: 38px;
+    }
+    &__title {
+        @include text(1.5rem, 600, unset, #333, 0);
+        margin-bottom: 20px;
+    }
+    &__content {
+        p {
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+    }
+    &__about {
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 13px;
+            letter-spacing: 0.05rem;
+        }
+    }
+}
